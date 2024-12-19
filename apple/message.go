@@ -19,8 +19,8 @@ type SendReq struct {
 }
 
 type Data struct {
-	Aps     Aps `json:"aps,omitempty"`
-	Payload int `json:"payload,omitempty"` // 自定义数据
+	Aps     Aps   `json:"aps,omitempty"`
+	Payload int64 `json:"payload,omitempty"` // 自定义数据
 }
 
 type Aps struct {
