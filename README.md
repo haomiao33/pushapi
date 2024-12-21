@@ -26,8 +26,6 @@ oppo （更新日期：2024-04-25） ：
 
 苹果 （更新日期：2024-12-21）：
 
-*   <https://developer.huawei.com/consumer/cn/doc/HMSCore-References/https-send-api-0000001050986197>
-
 
 
 ## 调用示例
