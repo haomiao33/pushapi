@@ -22,6 +22,14 @@ oppo （更新日期：2024-04-25） ：
 
 *   <https://developer.huawei.com/consumer/cn/doc/HMSCore-References/https-send-api-0000001050986197>
 
+# 新增内容
+
+苹果 （更新日期：2024-12-21）：
+
+*   <https://developer.huawei.com/consumer/cn/doc/HMSCore-References/https-send-api-0000001050986197>
+
+
+
 ## 调用示例
 
 ### vivo
@@ -174,6 +182,40 @@ func main() {
 }
 ```
 
+### 苹果
+
+```go
+package main
+
+
+func main() {
+	// APNs 认证密钥路径
+	authKeyPath := "xx.p8"
+	// Key ID 和 Team ID
+	keyID := "xx"
+	teamID := "xx"
+	// 设备 Token
+	deviceToken := "xx"
+	c := NewClient(authKeyPath, keyID, teamID)
+	_, err := c.Send(&SendReq{
+		DeviceToken: deviceToken,
+		Data: Data{
+			Aps: Aps{
+				Alert: Alert{
+					Title: "你好啊",
+					Body:  "吃饭了没有？",
+				},
+				Badge: 1,
+				Sound: "default",
+			},
+			Payload: 123456,
+		},
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+```
 ## License
 
 this repo is released under the [MIT License](https://github.com/modood/pushapi/blob/master/LICENSE).
