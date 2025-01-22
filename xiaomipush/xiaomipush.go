@@ -29,8 +29,8 @@ func (c *Client) SetHTTPClient(client *http.Client) {
 	c.httpClient = client
 }
 
-func (c *Client) Send(req *SendReq) (*SendRes, error) {
-	return c.SendWithContext(context.Background(), req)
+func (c *Client) Send(ctx context.Context, req *SendReq) (*SendRes, error) {
+	return c.SendWithContext(ctx, req)
 }
 
 func (c *Client) SendWithContext(ctx context.Context, req *SendReq) (*SendRes, error) {

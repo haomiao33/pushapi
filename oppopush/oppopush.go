@@ -72,8 +72,8 @@ func (c *Client) auth(ctx context.Context) (string, error) {
 }
 
 // Send 单推-通知栏消息推送
-func (c *Client) Send(req *SendReq) (*SendRes, error) {
-	return c.SendWithContext(context.Background(), req)
+func (c *Client) Send(ctx context.Context, req *SendReq) (*SendRes, error) {
+	return c.SendWithContext(ctx, req)
 }
 
 func (c *Client) SendWithContext(ctx context.Context, req *SendReq) (*SendRes, error) {
